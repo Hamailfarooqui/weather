@@ -70,6 +70,9 @@ class _WeatherPageState extends State<WeatherPage> {
           children: [
             Text(_weather?.cityName ?? "Loading city..."),
             Lottie.asset(getWeatherAnimation(_weather?.mainCondition)),
+            SizedBox(
+              height: 4,
+            ),
             Text('${_weather?.temperature.round()}°C'),
             Text(_weather?.mainCondition ?? ""),
           ],
